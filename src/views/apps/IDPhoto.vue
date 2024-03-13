@@ -200,18 +200,18 @@ const coustom_height = ref(2000);
 const selectedSize = ref(0);
 const sizes = computed(() => [
   {
-    label: "原图",
+    label: `原图（${photo.value?.naturalWidth}*${photo.value?.naturalHeight}）`,
     width: photo.value?.naturalWidth || 0,
     height: photo.value?.naturalHeight || 0,
     value: 0,
   },
-  { label: "一寸295*413", width: 295, height: 413, value: 1 },
-  { label: "二寸413*579", width: 413, height: 579, value: 2 },
-  { label: "大一寸390*567", width: 390, height: 567, value: 3 },
-  { label: "大二寸413*626", width: 413, height: 626, value: 4 },
-  { label: "小一寸360*378", width: 360, height: 378, value: 5 },
-  { label: "小二寸413*531", width: 413, height: 531, value: 6 },
-  { label: "身份证大头照", width: 260, height: 390, value: 7 },
+  { label: "一寸（295*413）", width: 295, height: 413, value: 1 },
+  { label: "二寸（413*579）", width: 413, height: 579, value: 2 },
+  { label: "大一寸（390*567）", width: 390, height: 567, value: 3 },
+  { label: "大二寸（413*626）", width: 413, height: 626, value: 4 },
+  { label: "小一寸（360*378）", width: 360, height: 378, value: 5 },
+  { label: "小二寸（413*531）", width: 413, height: 531, value: 6 },
+  { label: "身份证大头照（260*390）", width: 260, height: 390, value: 7 },
   // { label: "自定义",width: coustom_size.width, height: coustom_size.height, value: 8 },
   {
     label: "自定义",
@@ -220,7 +220,7 @@ const sizes = computed(() => [
     value: 8,
   },
 ]);
-const backgroundColor = ref("#F3C76C"); // 初始背景颜色
+const backgroundColor = ref(colors[2]); // 初始背景颜色
 const init_main = () => {
   if (sizes.value[0].label === "原图") {
     sizes.value[0].width = photo.value.naturalWidth;

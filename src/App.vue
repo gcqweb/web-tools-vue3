@@ -25,7 +25,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <a-config-provider :locale="locale">
+  <a-config-provider :locale="locale" >
 
     <RouterView />
     <!-- :key="$route.fullPath" -->

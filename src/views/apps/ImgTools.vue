@@ -14,7 +14,7 @@
       style="display: flex; justify-content: space-between; align-items: center"
     >
       <div class="canvas-container">
-        <canvas ref="canvasRef" id="canvas" style="height: 200px"></canvas>
+        <canvas ref="canvasRef" id="canvas" ></canvas>
       </div>
       <!-- <a-divider type="vertical" style="height: 300px" /> -->
       <a-card>
@@ -72,7 +72,7 @@
           <div v-if="currentTab === '1'">
             <a-row :gutter="8">
               <a-col :span="12">
-                <label>当前宽度:</label>
+                <label>自定义宽度:</label>
                 <a-input
                   type="number"
                   id="widthInput"
@@ -81,7 +81,7 @@
                 />
               </a-col>
               <a-col :span="12">
-                <label>当前高度:</label>
+                <label>自定义高度:</label>
                 <a-input
                   type="number"
                   id="heightInput"
@@ -323,6 +323,7 @@ function handleScaleChange() {
   imgWidth.value = selectedItem?.width;
   imgHeight.value = selectedItem?.height;
   console.log(currentScale.value, Scale.value, imgWidth.value, imgHeight.value);
+  loadImage()
 }
 const formatChange = (value) => {
   console.log(value);
@@ -344,6 +345,7 @@ const handleInputBlur = () => {
   if (width != "" || width || height != "" || height) {
     // readFile();
   }
+  // loadImage()
 };
 const base642img = () => {
   previewUrl.value = base64String.value;

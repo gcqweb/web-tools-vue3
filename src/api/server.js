@@ -5,7 +5,8 @@ import {ZyNotification} from "../libs/util.toast";
 import router from '@/router'
 // 创建 Axios 实例
 const instance = axios.create({
-    baseURL: "http://api.gcqweb.cn/",
+    // baseURL: "http://api.gcqweb.cn/",
+    baseURL: "http://192.168.8.116:1996/",
     timeout: 5000,
 });
 // 请求拦截器

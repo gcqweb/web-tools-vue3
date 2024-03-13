@@ -141,7 +141,7 @@ const disabled = computed(() => {
   return !(state.formState.username && state.formState.password);
 });
 
-onFinish()
+// onFinish()
 
 </script>
 

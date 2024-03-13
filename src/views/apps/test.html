@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      @property --bg-angle {
+        inherits: false;
+        initial-value: 0deg;
+        syntax: "<angle>";
+      }
+
+    
+      @keyframes spin {
+        to {
+          --bg-angle: 360deg;
+        }
+      }
+
+      article:hover {
+          animation-play-state: running;
+        
+      }
+
+      /******************************************************************
+    * Other styles to make the demo look nice
+    ******************************************************************/
+
+  
+
+      article {
+        border-radius: 1rem;
+        box-shadow: 0.125rem 0.25rem 0.25rem 0.5rem oklch(0.1 0.37 315 / 0.25);
+        color: white;
+        padding: 1rem;
+        width: min(400px, 90vw);
+        animation: spin 2.5s infinite linear paused;
+        background:linear-gradient(
+              to bottom,
+              oklch(0.1 0.2 240 / 0.95),
+              oklch(0.1 0.2 240 / 0.95)
+            )
+            padding-box,
+            conic-gradient(
+              from var(--bg-angle) in oklch longer hue,
+              oklch(0.85 0.37 0) 0 0
+            )
+            border-box; /* extends to outer border edges */
+
+        border: 6px solid transparent;
+
+       
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Hey look, this is only CSS!</h1>
+        <p>
+          I didn’t know you could do gradient borders like this. Hover over this
+          element to see the gradient animate!
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

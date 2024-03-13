@@ -56,7 +56,8 @@ watch(messages.value, (newVal) => {
   };
   
   onMounted(() => {
-    ws = new WebSocket("wss://api.gcqweb.cn/chat/");
+    // ws = new WebSocket("wss://api.gcqweb.cn/chat/");
+    ws = new WebSocket("ws://192.168.8.116:1996/chat/");
   
     ws.addEventListener("message", (event) => {
       msg_info.value=JSON.parse(event.data)

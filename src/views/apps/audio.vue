@@ -1,7 +1,7 @@
 <template>
     <context-holder />
 
-    <a-form style="max-width: 400px display:flex">
+    <a-form >
         <a-form-item label="格式" style="width: 30%">
             <a-select v-model:value="format" placeholder="格式">
                 <a-select-option value="mp3">mp3</a-select-option>
@@ -80,7 +80,8 @@ import RegionsPlugin from "wavesurfer.js/dist/plugins/regions.js";
 import ZoomPlugin from "wavesurfer.js/dist/plugins/zoom.esm.js";
 import TimelinePlugin from "wavesurfer.js/dist/plugins/timeline.js";
 // import Minimap from "wavesurfer.js/dist/plugins/minimap.js";
-import audioSrc from "./1.wav";
+// import audioSrc from "./1.wav";
+import audioSrc from "./陈子晴-要你.mp3"
 //   audioSrc=undefined
 const audio = new Audio();
 audio.src = audioSrc;
