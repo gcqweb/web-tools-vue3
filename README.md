@@ -1,5 +1,5 @@
-# ZY·Admin - 现代化的管理系统
-
+# 基于ZY·Admin - 现代化的管理系统修改
+[源码https://github.com/ZHYI-source/vue3-antd-plus](https://github.com/ZHYI-source/vue3-antd-plus)
 ZY·Admin是一个现代化的管理系统，提供了一系列功能丰富的组件和工具，帮助开发者快速搭建和开发管理后台应用。
 
 基于 Vue 3 + js + Pinia +Vite + Ant Design Vue 构建
@@ -52,8 +52,8 @@ ZY·Admin是一个开源项目，根据MIT许可证发布。有关更多信息�
 ## 联系方式
 
 如果你有任何问题或建议，请通过以下方式联系我：
-
-- 邮箱：1840354092@qq.com
+- 本项目邮箱：gcqweb@qq.com
+- 源码作者邮箱：1840354092@qq.com
 - 微信：
 
 
